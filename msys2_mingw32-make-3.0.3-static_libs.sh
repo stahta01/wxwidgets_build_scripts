@@ -13,7 +13,7 @@ git checkout $WXWIDGETS_3_0_LFS_BRANCH || exit 2
 # git status -uno
 
 
-export PATH=$COMPILER_640TDM_BASE/bin:$PATH
+export PATH=$MSYS2_COMPILER_BASE/bin:$PATH
 
 # echo $PATH
 
