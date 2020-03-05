@@ -38,4 +38,20 @@ mingw32-make -f makefile.gcc \
   CXXFLAGS=-std=gnu++11 \
   MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=debug
 
+cd $WXWIDGETS_REPO/samples/minimal || exit 4
+#
+mingw32-make -f makefile.gcc \
+  CFG= \
+  VENDOR=$_COMPILER_VERSION \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=release
+
+mingw32-make -f makefile.gcc \
+  CFG= \
+  VENDOR=$_COMPILER_VERSION \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=debug
+
 # echo "Finished"
