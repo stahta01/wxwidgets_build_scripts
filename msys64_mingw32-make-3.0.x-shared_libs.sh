@@ -10,6 +10,7 @@ cd $WXWIDGETS_3_0_REPO || exit 1
 # git lfs install
 git checkout $WXWIDGETS_3_0_LFS_BRANCH || exit 2
 git pull
+cp -f include/wx/msw/setup0.h include/wx/msw/setup.h
 # git status -uno
 
 export PATH=$MSYS2_COMPILER_X64_BASE/bin:$PATH
@@ -24,21 +25,22 @@ cd $WXWIDGETS_3_0_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
-  CXXFLAGS=-std=gnu++11 \
+  CPPFLAGS="-D__USE_MINGW_ANSI_STDIO=1" \
+  CXXFLAGS="-std=gnu++11 -DNOPCH" \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release clean
-rm -f $WXWIDGETS_3_0_REPO/include/wx/msw/setup.h
 
 cd $WXWIDGETS_3_0_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
-  CXXFLAGS=-std=gnu++11 \
+  CPPFLAGS="-D__USE_MINGW_ANSI_STDIO=1" \
+  CXXFLAGS="-std=gnu++11 -DNOPCH" \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release
 
-mingw32-make -f makefile.gcc \
-  VENDOR=$_COMPILER_VERSION \
-  COMPILER_VERSION=$_COMPILER_VERSION \
-  CXXFLAGS=-std=gnu++11 \
-  MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=debug
+#mingw32-make -f makefile.gcc \
+  #VENDOR=$_COMPILER_VERSION \
+  #COMPILER_VERSION=$_COMPILER_VERSION \
+  #CXXFLAGS="-std=gnu++11 -DNOPCH" \
+  #MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=debug
 
 # echo "Finished"
