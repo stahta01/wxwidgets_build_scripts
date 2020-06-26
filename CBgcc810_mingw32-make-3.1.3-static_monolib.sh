@@ -33,6 +33,12 @@ mingw32-make -f makefile.gcc \
   CXXFLAGS+="-fno-keep-inline-dllexport -std=gnu++11" \
   MONOLITHIC=1 SHARED=0 UNICODE=1 BUILD=release
 
+mingw32-make -f makefile.gcc \
+  CFG=mono \
+  COMPILER_VERSION=810_x64 \
+  CXXFLAGS+="-fno-keep-inline-dllexport -std=gnu++11" \
+  MONOLITHIC=1 SHARED=0 UNICODE=1 BUILD=debug
+
 cd $WXWIDGETS_REPO/samples/minimal || exit 4
 mingw32-make -f makefile.gcc \
   CFG=mono \
