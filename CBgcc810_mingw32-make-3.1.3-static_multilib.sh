@@ -34,6 +34,12 @@ mingw32-make -f makefile.gcc \
   COMPILER_VERSION=810_x64 \
   MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=release
 
+cd $WXWIDGETS_REPO/build/msw || exit 3
+mingw32-make -f makefile.gcc \
+  CXXFLAGS+="-fno-keep-inline-dllexport -std=gnu++11" \
+  COMPILER_VERSION=810_x64 \
+  MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=debug
+
 cd $WXWIDGETS_REPO/samples/minimal || exit 4
 mingw32-make -f makefile.gcc \
   CXXFLAGS+="-fno-keep-inline-dllexport -std=gnu++11" \
