@@ -41,7 +41,7 @@ rm -f $WXWIDGETS_REPO/include/wx/msw/setup.h
 # Cleanup Finish
 ####
 
-cd build/msw || exit 3
+cd $WXWIDGETS_REPO/build/msw || exit 3
 
 mingw32-make -f makefile.gcc \
   CFG= \
