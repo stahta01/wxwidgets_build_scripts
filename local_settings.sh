@@ -2,8 +2,8 @@
 
 # MINGW_ORG_COMPILER_BASE
 #    can not have a colon ":" in it.
-MINGW_ORG_COMPILER_BASE="/C/Apps32/mingw.org"
-MINGW_ORG_COMPILER_VERSION="630M32"
+MINGW_ORG_COMPILER_BASE="/C/MinGW.org"
+MINGW_ORG_COMPILER_VERSION="920M32"
 
 # MSYS2_BASE
 #    can not have a colon ":" in it.
