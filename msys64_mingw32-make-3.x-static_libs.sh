@@ -22,6 +22,25 @@ _COMPILER_VERSION="${MSYS2_COMPILER_VERSION}_x64"
 
 # echo $_COMPILER_VERSION
 
+####
+# Cleanup start
+cd $WXWIDGETS_REPO/build/msw || exit 3
+mingw32-make -f makefile.gcc \
+  CFG= \
+  VENDOR=$_COMPILER_VERSION \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=release clean
+mingw32-make -f makefile.gcc \
+  CFG= \
+  VENDOR=$_COMPILER_VERSION \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=0 SHARED=0 UNICODE=1 BUILD=debug  clean
+rm -f $WXWIDGETS_REPO/include/wx/msw/setup.h
+# Cleanup Finish
+####
+
 cd build/msw || exit 3
 
 mingw32-make -f makefile.gcc \
