@@ -8,6 +8,7 @@ cd $WXWIDGETS_REPO || exit 1
 
 # Change to correct wxWidgets Git branch
 # git lfs install
+git restore include/wx/msw/setup0.h
 git checkout master || exit 2
 git pull
 git submodule init
@@ -37,9 +38,14 @@ mingw32-make -f makefile.gcc \
   COMPILER_VERSION=$_COMPILER_VERSION \
   CXXFLAGS=-std=gnu++11 \
   MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=debug  clean
-rm -f $WXWIDGETS_REPO/include/wx/msw/setup.h
+#
+cp -f $WXWIDGETS_REPO/include/wx/msw/setup0.h $WXWIDGETS_REPO/include/wx/msw/setup.h
 # Cleanup Finish
 ####
+
+sed --in-place "s/#define wxUSE_GRAPHICS_DIRECT2D 0/#define wxUSE_GRAPHICS_DIRECT2D 1/" $WXWIDGETS_REPO/include/wx/msw/setup.h
+
+## exit
 
 cd $WXWIDGETS_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
