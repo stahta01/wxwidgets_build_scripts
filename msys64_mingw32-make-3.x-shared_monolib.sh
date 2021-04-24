@@ -8,7 +8,7 @@ cd $WXWIDGETS_REPO || exit 1
 
 # Change to correct wxWidgets Git branch
 # git lfs install
-git restore include/wx/msw/setup0.h
+git restore include/wx/msw/setup.h
 git checkout master || exit 2
 git pull
 git submodule init
@@ -39,7 +39,7 @@ mingw32-make -f makefile.gcc \
   CXXFLAGS=-std=gnu++11 \
   MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=debug  clean
 #
-cp -f $WXWIDGETS_REPO/include/wx/msw/setup0.h $WXWIDGETS_REPO/include/wx/msw/setup.h
+# cp -f $WXWIDGETS_REPO/include/wx/msw/setup0.h $WXWIDGETS_REPO/include/wx/msw/setup.h
 # Cleanup Finish
 ####
 
