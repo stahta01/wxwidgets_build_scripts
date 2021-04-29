@@ -50,8 +50,7 @@ mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
   CXXFLAGS=-std=gnu++11 \
-  WXUNIV=1 MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release
-
+  WXUNIV=1 MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release && \
 mingw32-make -f makefile.gcc \
   CFG=univ \
   VENDOR=$_COMPILER_VERSION \
