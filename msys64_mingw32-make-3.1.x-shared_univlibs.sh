@@ -12,7 +12,7 @@ git checkout master || exit 2
 git pull
 git submodule init
 git submodule update
-git checkout temp && git rebase master
+git checkout universal && git rebase master
 # git status -uno
 
 export PATH=$MSYS2_COMPILER_X64_BASE/bin:$PATH
