@@ -26,14 +26,10 @@ cd $WXWIDGETS_3_0_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
-  CPPFLAGS="-D__MINGW64_TOOLCHAIN__" \
-  CXXFLAGS=-std=gnu++11 \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release clean
 mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
-  CPPFLAGS="-D__MINGW64_TOOLCHAIN__" \
-  CXXFLAGS=-std=gnu++11 \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=debug  clean
 #
 # Cleanup Finish
@@ -51,13 +47,13 @@ mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
   CPPFLAGS="-D__MINGW64_TOOLCHAIN__" \
-  CXXFLAGS="-std=gnu++11 -fpermissive" \
+  CXXFLAGS="-std=gnu++11 -fpermissive -Wno-deprecated-copy" \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=release && \
 mingw32-make -f makefile.gcc \
   VENDOR=$_COMPILER_VERSION \
   COMPILER_VERSION=$_COMPILER_VERSION \
   CPPFLAGS="-D__MINGW64_TOOLCHAIN__" \
-  CXXFLAGS="-std=gnu++11 -fpermissive" \
+  CXXFLAGS="-std=gnu++11 -fpermissive -Wno-deprecated-copy" \
   MONOLITHIC=0 SHARED=1 UNICODE=1 BUILD=debug
 
 # echo "Finished"
