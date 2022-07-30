@@ -29,4 +29,5 @@ WXWIDGETS_2_8_PROD_BRANCH="wxwidgets2.8.12_git"
 WXWIDGETS_3_1_REPO="H:/repos/git/devel/wxwidgets_libs/wxWidgets"
 WXWIDGETS_3_1_PROD_BRANCH="wxwidgets3.1.6_git"
 
-
+WXWIDGETS_3_2_REPO="H:/repos/git/devel/wxwidgets_libs/wxWidgets_3_2_branch"
+WXWIDGETS_3_2_PROD_BRANCH="wxwidgets3.2.0_git"
