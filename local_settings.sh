@@ -17,7 +17,7 @@ MSYS2_COMPILER_X32_BASE="$MSYS2_BASE/mingw32"
 MSYS2_COMPILER_VERSION="1220"
 MSYS2_CLANG_VERSION="1507CLANG"
 
-WXWIDGETS_REPO="H:/repos/git/devel/wxwidgets_libs/wxWidgets"
+WXWIDGETS_REPO="H:/devel/wxwidgets_libs/repos/wxWidgets"
 
 WXWIDGETS_3_0_REPO="H:/devel/wxwidgets_libs/repos/wxWidgets_3_0_branch"
 WXWIDGETS_3_0_TEST_BRANCH="testing3.0"
