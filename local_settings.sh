@@ -27,4 +27,4 @@ WXWIDGETS_2_8_REPO="H:/devel/wxwidgets_libs/repos/wxWidgets_2_8_branch"
 WXWIDGETS_2_8_PROD_BRANCH="wxwidgets2.8.12_git"
 
 WXWIDGETS_3_2_REPO="H:/devel/wxwidgets_libs/repos/wxWidgets_3_2_branch"
-WXWIDGETS_3_2_PROD_BRANCH="wxwidgets3.2.0_git"
+WXWIDGETS_3_2_PROD_BRANCH="wxwidgets3.2.2_git"
