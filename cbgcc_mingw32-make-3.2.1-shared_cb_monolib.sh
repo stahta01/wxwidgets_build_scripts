@@ -27,13 +27,13 @@ _COMPILER_VERSION="${CB_RELEASE_COMPILER_VERSION}_x64"
 # Cleanup start
 cd $WXWIDGETS_3_2_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
-  CFG= \
+  CFG=mono \
   VENDOR=cb \
   CXXFLAGS=-std=gnu++11 \
   COMPILER_VERSION=$_COMPILER_VERSION \
   MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=release clean
 mingw32-make -f makefile.gcc \
-  CFG= \
+  CFG=mono \
   VENDOR=cb \
   CXXFLAGS=-std=gnu++11 \
   COMPILER_VERSION=$_COMPILER_VERSION \
@@ -48,7 +48,7 @@ sed --in-place "s/#define wxUSE_GRAPHICS_DIRECT2D 0/#define wxUSE_GRAPHICS_DIREC
 
 cd $WXWIDGETS_3_2_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
-  CFG= \
+  CFG=mono \
   VENDOR=cb \
   CXXFLAGS=-std=gnu++11 \
   COMPILER_VERSION=$_COMPILER_VERSION \
@@ -56,7 +56,7 @@ mingw32-make -f makefile.gcc \
 
 cd $WXWIDGETS_3_2_REPO/samples || exit 4
 mingw32-make -f makefile.gcc \
-  CFG= \
+  CFG=mono \
   VENDOR=cb \
   CXXFLAGS=-std=gnu++11 \
   COMPILER_VERSION=$_COMPILER_VERSION \
@@ -65,7 +65,7 @@ mingw32-make -f makefile.gcc \
 
 cd $WXWIDGETS_3_2_REPO/build/msw || exit 3
 mingw32-make -f makefile.gcc \
-  CFG= \
+  CFG=mono \
   VENDOR=cb \
   CXXFLAGS=-std=gnu++11 \
   COMPILER_VERSION=$_COMPILER_VERSION \
