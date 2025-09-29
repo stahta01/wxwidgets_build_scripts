@@ -23,7 +23,7 @@ CB_NIGHTLY_COMPILER_VERSION="14.1.0"
 CB_RELEASE_COMPILER_BASE=/C/PROGRA~1/CODEBL~1/MinGW
 CB_RELEASE_COMPILER_VERSION="8.1.0"
 
-WXWIDGETS_REPO="C:/devel/wxwidgets_libs/repos/wxWidgets"
+WXWIDGETS_REPO="C:/devel/repos/wxwidgets_libs/wxWidgets"
 
 WXWIDGETS_3_0_REPO="C:/devel/wxwidgets_libs/repos/wxWidgets_3_0_branch"
 WXWIDGETS_3_0_TEST_BRANCH="testing3.0"
